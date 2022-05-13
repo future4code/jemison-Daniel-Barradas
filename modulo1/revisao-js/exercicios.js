@@ -154,7 +154,27 @@ function retornaPessoasNaoAutorizadas(pessoas) {
 
 // EXERCÍCIO 14
 function retornaContasComSaldoAtualizado(contas) { 
+  let i = 0;
 
+  while (i<contas.length){
+  
+      let quantia = [];
+      function somar(user) {
+          return user.reduce((sum, nr) => sum + nr, 0);
+        }
+  
+      function quantiaTotal (usuario) {
+          usuario[i].compras.forEach(nr => quantia.push(nr * -1));
+          console.log(quantia);
+      }
+  
+      quantiaTotal(contas);
+  
+      contas[i].compras = []
+      contas[i].saldoTotal += somar(quantia)
+  i++
+  }
+  return contas
   }
 
 // EXERCÍCIO 15A
