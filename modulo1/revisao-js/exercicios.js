@@ -179,7 +179,11 @@ function retornaContasComSaldoAtualizado(contas) {
 
 // EXERCÍCIO 15A
 function retornaArrayOrdenadoAlfabeticamente(consultas) {
-
+  let ordenar=(x,y)=>{
+    return x.nome.localeCompare(y.nome)
+  }
+  consultas.sort(ordenar)
+  return consultas
 }
 
 // EXERCÍCIO 15B
