@@ -57,7 +57,31 @@ function retornaMaiorNumero(array) {
 
 // EXERCÍCIO 07
 function retornaObjetoEntreDoisNumeros(num1, num2) {
-
+  function divisibilidade (primeiro,segundo) {
+    if (primeiro>segundo) {
+        return primeiro%segundo==0
+    } else if (primeiro<segundo) {
+        return segundo%primeiro==0
+    } else if (primeiro==segundo) {
+        return true
+    }
+}
+function subtracao (primeiro,segundo) {
+    if(primeiro>segundo) {
+        return primeiro-segundo
+    } else if (primeiro<segundo) {
+        return segundo-primeiro
+    } else if (primeiro==segundo) {
+        return 0
+    }
+}
+const arrayNumeros = [num1,num2]
+const Objeto = {
+    maiorNumero : retornaMaiorNumero(arrayNumeros),
+    maiorDivisivelPorMenor : divisibilidade(num1, num2),
+    diferenca : subtracao(num1,num2)
+}
+return Objeto
 }
 
 // EXERCÍCIO 08
