@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfólio | Daniel Barradas</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <section class="sec">
+        <header>
+            <a href="#"><img src="img/logo.png" class="logo"></a>
+            <div class="toggleMenu" onclick="menuToggle();"></div>
+            <ul class="navegacao">
+                <li><a href="#">Home</a></li>
+                <li><a href="ensino.html">Ensino</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </header>
+        <div class="conteudo">
+            <div class="caixaDeTexto">
+                <h2>minha<br><span>formação:</span></h2><br>
+                <p>Instituições:
+                    Desenho Industrial - Universidade Federal Fluminense
+                    Desenvolvimento Web Full Stack - Labenu                    
+                    </p>
+                <a href="projetos.html">Veja Mais Projetos</a>
+            </div>
+            <div class="caixaImg">
+                <img src="img/imagem.png" class="imagem">
+            </div>
+        </div>
+            <ul class="miniatura">
+                <li><img src="/img/light.png" onclick="imgSlide('/img/imagem.png');mudaCor('#0062be')"></li>
+                <li><img src="/img/dark.png" onclick="imgSlide('/img/imagem.png');mudaCor('#1e1e1e')"></li>
+            </ul>
+            <ul class="redesSociais">
+                <li><a href="https://www.linkedin.com/in/daniel-freitas-barradas"><img src="/img/linkedin.png"></a></li>
+                <li><a href="https://api.whatsapp.com/send?phone=5521990986039"><img src="/img/wpp.png"></a></li>
+                <li><a href=mailto:<contato.danielbarradas@gmail.com><img src="/img/email.png"></a></li>
+            </ul>
+    </section>
+    <script type="text/javascript">
+        function imgSlide(anything){
+            document.querySelector('.imagem').src=anything
+        }
+        function mudaCor(cor){
+            const sec = document.querySelector('.sec');
+            sec.style.background=cor;
+        }
+        function menuToggle(){
+            const toggleMenu=document.querySelector('.toggleMenu');
+            const navegacao=document.querySelector('.navegacao');
+            toggleMenu.classList.toggle('active')
+            navegacao.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>
