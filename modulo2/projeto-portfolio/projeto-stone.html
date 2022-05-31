@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfólio | Daniel Barradas</title>
+    <link rel="stylesheet" type="text/css" href="style-stone.css">
+</head>
+<body>
+    <section class="sec">
+        <header>
+            <a href="index.html"><img src="img/logo.png" class="logo"></a>
+            <div class="toggleMenu" onclick="menuToggle();"></div>
+            <ul class="navegacao">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ensino.html">Ensino</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </header>
+        <div class="conteudo">
+            <div class="caixaDeTexto">
+                <h2>Projeto de branding<br><span>e design web</span></h2>
+                <p>O escopo do projeto, envole tanto a idealização da identidade visual para a StoneTech Máquinas, quanto a construção de um storytelling a fim de consolidar a jornada do usuário através das páginas. Para a construção do site foram utilizadas a plataforma Wordpress e o plugin Elementor. Para as peças gráficas, foi utilizado o Pacote Adobe, onde foram desenhados também cartôes de visitas e e-mail marketing.
+                    </p>
+                <a href="contato.html">Entre em contato comigo!</a>
+            </div>
+            <div class="caixaImg">
+                <img src="img/imagem.png" class="imagem">
+            </div>
+        </div>
+            <ul class="miniatura">
+                <li><img src="/img/stone.png" onclick="imgSlide('/img/stone.png');mudaCor('#888888')"></li>
+                <li><img src="/img/wire.png" onclick="imgSlide('/img/wire.png');mudaCor('#0062be')"></li>
+                <li><img src="/img/Landing page.png" onclick="imgSlide('/img/Landing page.png');mudaCor('#1e1e1e')"></li>
+                <li><img src="/img/contato.png" onclick="imgSlide('/img/contato.png');mudaCor('#0062be')"></li>
+                <li><img src="/img/post1.png" onclick="imgSlide('/img/post1.png');mudaCor('#1e1e1e')"></li>
+            </ul>
+            <ul class="redesSociais">
+                <li><a href="https://www.linkedin.com/in/daniel-freitas-barradas"><img src="/img/linkedin.png"></a></li>
+                <li><a href="https://api.whatsapp.com/send?phone=5521990986039"><img src="/img/wpp.png"></a></li>
+                <li><a href=mailto:<contato.danielbarradas@gmail.com><img src="/img/email.png"></a></li>
+            </ul>
+    </section>
+    <script type="text/javascript">
+        function imgSlide(anything){
+            document.querySelector('.imagem').src=anything
+        }
+        function mudaCor(cor){
+            const sec = document.querySelector('.sec');
+            sec.style.background=cor;
+        }
+        function menuToggle(){
+            const toggleMenu=document.querySelector('.toggleMenu');
+            const navegacao=document.querySelector('.navegacao');
+            toggleMenu.classList.toggle('active')
+            navegacao.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>

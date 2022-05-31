@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfólio | Daniel Barradas</title>
+    <link rel="stylesheet" type="text/css" href="style-contato.css">
+</head>
+<body>
+    <section class="sec">
+        <header>
+            <a href="index.html"><img src="img/logo.png" class="logo"></a>
+            <div class="toggleMenu" onclick="menuToggle();"></div>
+            <ul class="navegacao">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ensino.html">Ensino</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </header>
+        <div class="conteudo">
+            <div class="caixaDeTexto">
+                <h2>Área de<br><span>contato:</span></h2>
+                <p>Explore clicando no projeto abaixo e descubra um pouco mais sobre minha experiência na prática!</p><br>
+                <form>
+                    <input type="text" name="Nome" placeholder="Nome todo" required>
+                    <input type="number" name="Numero" placeholder="Email" required><br>
+                    <input type="email" name="Email" placeholder="Email" required>
+                    <select name="Área">
+                        <option>Identidade Visual</option>
+                        <option>Desenvolvimento Web</option>
+                        <option>Marketing Digital</option>
+                        <option>Outro</option>
+                    </select><br>
+                    <textarea name="Mensagem" placeholder="Como eu posso ajudar?" required></textarea><br>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+            <div class="caixaImg">
+                <img src="img/imagem.png" class="imagem">
+            </div>
+        </div>
+            <ul class="miniatura">
+                <li><img src="/img/light.png" onclick="imgSlide('/img/imagem.png');mudaCor('#0062be')"></li>
+                <li><img src="/img/dark.png" onclick="imgSlide('/img/imagem.png');mudaCor('#1e1e1e')"></li>
+            </ul>
+            <ul class="redesSociais">
+                <li><a href="https://www.linkedin.com/in/daniel-freitas-barradas"><img src="/img/linkedin.png"></a></li>
+                <li><a href="https://api.whatsapp.com/send?phone=5521990986039"><img src="/img/wpp.png"></a></li>
+                <li><a href=mailto:<contato.danielbarradas@gmail.com><img src="/img/email.png"></a></li>
+            </ul>
+    </section>
+    <script type="text/javascript">
+        function imgSlide(anything){
+            document.querySelector('.imagem').src=anything
+        }
+        function mudaCor(cor){
+            const sec = document.querySelector('.sec');
+            sec.style.background=cor;
+        }
+        function menuToggle(){
+            const toggleMenu=document.querySelector('.toggleMenu');
+            const navegacao=document.querySelector('.navegacao');
+            toggleMenu.classList.toggle('active')
+            navegacao.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>
