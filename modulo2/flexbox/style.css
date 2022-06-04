@@ -1,0 +1,99 @@
+*{
+        margin: 0;
+        padding: 0;
+}
+.navegacao{
+    display: flex;
+    height: 40px;
+    background-color: mediumvioletred;
+}
+.navegacao img{
+    position: absolute;
+    width: 25px;
+    margin: 5px;
+}
+.navegacao h4{
+    position: absolute;
+    left: 37px;
+    top: 10px;
+}
+.navegacao button{
+    position: absolute;
+    width: 50px;
+    right:  10px;
+    top: 10px;
+}
+footer{
+    padding-top: 10px;
+    display: flex;
+    height: 20px;
+    background-color: mediumvioletred;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    justify-content: center;
+}
+.menuLateral{
+    display: flex;
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background-color: #f2d0e0;
+}
+.menuLateral .primeiraColuna img{
+    margin: 5px 8px 10px 8px;
+    width: 20px;
+}
+.menuLateral .primeiraColuna{
+    flex-direction: column;
+    display:flex;
+}
+.menuLateral .segundaColuna h3{
+    margin: 4px 8px 10px 8px;
+    font-weight: 100;
+}
+.menuLateral .segundaColuna{
+    flex-direction: column;
+    display:flex;
+    width: 212px;
+}
+.menuLateral .terceiraColuna img{
+    margin: 5px 8px 10px 8px;
+    width: 20px;
+}
+.menuLateral .terceiraColuna{
+    flex-direction: column;
+    display:flex;
+}
+.painelPrincipal{
+    display: flex;
+    margin-left: 300px;
+}
+.painelPrincipal .cards{
+    display: flex;
+    flex-wrap: wrap;
+}
+.painelPrincipal .card img{
+    width: 170px;
+    height: 170px;
+}
+.painelPrincipal .card{
+    margin: 10px;
+    display: flex;
+    height: 270px;
+    width: 170px;
+    box-shadow: 1px 2px 2px 1px darkgray;
+}
+.painelPrincipal .cards .card h3{
+    text-align: center;
+    position:absolute;
+    padding: 12px;
+    margin-top: 160px;
+}
+.painelPrincipal .cards .card p{
+    width: 160px;
+    text-align: center;
+    position:absolute;
+    margin-top: 200px;
+    margin-left: 5px;
+}
