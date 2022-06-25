@@ -2,6 +2,12 @@ import React from 'react';
 import './App.css';
 import CardGrande from './components/CardGrande/CardGrande';
 import ImagemButton from './components/ImagemButton/ImagemButton';
+import Perfil from './imagem.png';
+import LogoPrimeiraExperiencia from './logo-lenny.png'
+import LogoSegundaExperiencia from './logo-intnet.png'
+import CardPequeno from './components/CardPequeno/CardPequeno';
+import Email from './email.png';
+import Placeholder from './placeholder.png';
 
 function App() {
   return (
@@ -9,9 +15,9 @@ function App() {
       <div className="page-section-container">
         <h2>Dados pessoais</h2>
         <CardGrande 
-          imagem="https://uploads-ssl.webflow.com/5d640f4558306be99cf47a0e/5dd57846babb597b77c6bb1d_PerfilFuture4_cor.png" 
-          nome="Astrodev" 
-          descricao="Oi, eu sou o Astrodev. Sou o chefe dos alunos da Labenu. Adoro pedir e-mails na sexta-feira e esperar os alunos responderem só para responder com uma bronca e dar mais trabalho para eles."
+          imagem={Perfil} 
+          nome="Daniel Barradas" 
+          descricao="Oi, eu sou o Daniel. Atualmente estudando desenvolvimento Full Stack em horário noturno, na escola de programação Labenu. Onde além da parte técnica, estudo e ponho em prática metodologias ágeis (Sprint/Kanban/Scrum)."
         />
         
         <ImagemButton 
@@ -20,18 +26,32 @@ function App() {
         />
       </div>
 
+      <div className='page-section-container'>
+        <CardPequeno 
+          imagem={Email} 
+          nome="E-mail:⠀" 
+          descricao="contato.danielbarradass@gmail.com" 
+        />
+
+        <CardPequeno 
+          imagem={Placeholder} 
+          nome="Endereço:⠀" 
+          descricao="Rio de Janeiro, Brasil." 
+        />
+      </div>
+
       <div className="page-section-container">
         <h2>Experiências profissionais</h2>
         <CardGrande 
-          imagem="https://s3.amazonaws.com/future4.com.br/static/headf4-c492117ca2373dc85ca81bf715b3dc2a.png" 
-          nome="Labenu" 
-          descricao="Formando desenvolvedores para o mercado de trabalho!" 
+          imagem={LogoSegundaExperiencia} 
+          nome="Intnet" 
+          descricao="Ocupando cargo de analista de marketing júnior, executei tarefas de desenvolvimento, gerenciamento e análise de campanhas, inbound marketing, marketing de conteúdo, pesquisas, landing pages, publicidade impressa, dark posts, idealização e publicação de peças (feed e stories) através de ferramentas do Facebook Business Manager." 
         />
         
         <CardGrande 
-          imagem="https://logodownload.org/wp-content/uploads/2019/03/nasa-logo-0-768x768.png" 
-          nome="NASA" 
-          descricao="Apontando defeitos." 
+          imagem={LogoPrimeiraExperiencia}
+          nome="Lenny Niemeyer" 
+          descricao="Estágio de Design, onde tive experiência com fotografia básica, edição e tratamento de imagens, aplicação de estampas, elaboração de mockups virtuais, desenvolvimento de moodboards, montagem de books e catálogos exibidos dentro e fora do Brasil." 
         />
       </div>
 
