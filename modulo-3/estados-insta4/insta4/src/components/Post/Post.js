@@ -8,6 +8,7 @@ import iconeCoracaoPreto from '../../img/favorite.svg'
 import iconeComentario from '../../img/comment_icon.svg'
 import {SecaoComentario} from '../SecaoComentario/SecaoComentario'
 
+
 const PostContainer = styled.div`
   border: 1px solid gray;
   width: 300px;
@@ -45,16 +46,25 @@ function Post(props){
     curtido: false,
     numeroCurtidas: 0,
     comentando: false,
-    numeroComentarios: 0
+    numeroComentarios: 0,
+    inputComentario: ''
   })
 
-  const [numeroCurtidas, setnumeroCurtidas] = useState (0)
+  const [numeroCurtidas, setNumeroCurtidas] = useState (0)
   const [curtido, setCurtido] = useState(false)
   const [comentando, setComentando] = useState(false)
   const [numeroComentarios, setNumeroComentarios] = useState(0)
+  const [inputComentario, setInputComentario] = useState ("")
 
   const onClickCurtida = () => {
-    console.log('Curtiu!')
+    if (!curtido){
+      setNumeroCurtidas(numeroCurtidas + 1);
+      setCurtido(true)
+    } else {
+      setNumeroCurtidas(numeroCurtidas - 1);
+      setCurtido(false)
+    }
+
   }
   
   const onClickComentario = () => {
@@ -63,6 +73,10 @@ function Post(props){
       componenteComentario = <SecaoComentario aoEnviar={aoEnviarComentario}/>
     }
     console.log(comentando)
+  }
+
+  const handleInputComentario = (event) =>{
+    setInputComentario(event.target.value)
   }
   
   const aoEnviarComentario = () => {
@@ -82,6 +96,7 @@ function Post(props){
 
     if(comentando) {
       componenteComentario = <SecaoComentario aoEnviar={aoEnviarComentario}/>
+      
     }
 
   return(
@@ -97,7 +112,7 @@ function Post(props){
         <IconeComContador
           icone={iconeCurtida}
           onClickIcone={onClickCurtida}
-          valorContador={state.numeroCurtidas}
+          valorContador={numeroCurtidas}
         />
 
         <IconeComContador
