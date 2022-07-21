@@ -5,7 +5,58 @@ import styled from 'styled-components'
 
 // Css que convertemos => App.css
 
-export const ContainerPai = styled.div`
+export const MainContainer = styled.div`
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    background-color: orange;
+    width: 100vw;
+    height: 100vh;
+`
+export const Centro = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    width: 70vw;
+    height: 100vh;
+`
+
+export const Texto1 = styled.div`
+    display: flex;
+    justify-content: center;
+    div{
+        display: flex;
+        background-color: white;
+        padding: 0vh 1vh;
+        margin: 1.5vh 4vh;
+        p {
+            margin: 1vh;
+        }
+    }
+`
+export const Formulario = styled.div`
+    display: flex;
+    gap: 30px;
+    position: absolute;
+    bottom: 10vh;
+`
+export const FormularioTexto = styled.div`
+    display: flex;
+`
+export const FooterPag = styled.div`
+    display: flex;
+    position: fixed;
+    background-color:gray;
+    width: 100vw;
+    height: 5vh;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    bottom: 0px;
+`
+/* export const ContainerPai = styled.div`
     background-color: red;
 `
 export const H1Estilizado = styled.h1`
@@ -13,7 +64,7 @@ export const H1Estilizado = styled.h1`
 `
 export const H2Estilizado = styled.h2 `
     color: aquamarine;
-`
+` */
 
 
 // ------ EX1----------------------
@@ -67,7 +118,7 @@ export const FooterTop = styled.footer`
 
 //------ Exercicio 3
 
-export const HeaderEstilizado = styled.header `
+/* export const HeaderEstilizado = styled.header `
     background-color: orange;
     display: flex;
     align-items: center;
@@ -77,6 +128,6 @@ export const HeaderEstilizado = styled.header `
 `
 export const Logo = styled.p `
     color: white;
-`
+` */
 
 
