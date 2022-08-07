@@ -7,6 +7,13 @@
   pointer-events: none;
 }
 
+.meu-componente {
+  background-color: grey;
+  margin-left: 30vw;
+  margin-right: 30vw;
+  height: 500px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
