@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { ItemUsuario } from "../styled";
-import { MatchesContainer, SecaoMatches } from "../components/Matches"
+import { MatchesContainer, SecaoMatches } from "./Matches"
 
 function ExibirPerfis(props) {
 
